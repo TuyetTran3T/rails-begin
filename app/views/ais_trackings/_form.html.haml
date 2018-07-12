@@ -1,0 +1,38 @@
+= form_with(model: ais_tracking, local: true) do |form|
+  - if ais_tracking.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(ais_tracking.errors.count, "error")
+        prohibited this ais_tracking from being saved:
+      %ul
+        - ais_tracking.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :latitude
+    = form.text_field :latitude, id: :ais_tracking_latitude
+  .field
+    = form.label :longtitude
+    = form.text_field :longtitude, id: :ais_tracking_longtitude
+  .field
+    = form.label :heading
+    = form.number_field :heading, id: :ais_tracking_heading
+  .field
+    = form.label :speed_over_ground
+    = form.text_field :speed_over_ground, id: :ais_tracking_speed_over_ground
+  .field
+    = form.label :last_ais_updated_at
+    = form.datetime_select :last_ais_updated_at, id: :ais_tracking_last_ais_updated_at
+  .field
+    = form.label :nav_status_code
+    = form.number_field :nav_status_code, id: :ais_tracking_nav_status_code
+  .field
+    = form.label :vessel_id
+    = form.number_field :vessel_id, id: :ais_tracking_vessel_id
+  .field
+    = form.label :course
+    = form.text_field :course, id: :ais_tracking_course
+  .field
+    = form.label :collection_type
+    = form.number_field :collection_type, id: :ais_tracking_collection_type
+  .actions
+    = form.submit

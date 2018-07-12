@@ -1,0 +1,2 @@
+class JsBeginController < ApplicationController
+end

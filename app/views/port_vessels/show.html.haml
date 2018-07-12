@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Port:
+  = @port_vessel.port_id
+%p
+  %strong Vessel:
+  = @port_vessel.vessel_id
+%p
+  %strong Last position updated at:
+  = @port_vessel.last_position_updated_at
+%p
+  %strong Nav status code:
+  = @port_vessel.nav_status_code
+= link_to 'Edit', edit_port_vessel_path(@port_vessel)
+|
+= link_to 'Back', port_vessels_path

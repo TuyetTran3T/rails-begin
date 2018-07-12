@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Vessel:
+  = @ais_vessal_destination.vessel_id
+%p
+  %strong Destination:
+  = @ais_vessal_destination.destination
+%p
+  %strong Draught:
+  = @ais_vessal_destination.draught
+%p
+  %strong Eta:
+  = @ais_vessal_destination.eta
+= link_to 'Edit', edit_ais_vessal_destination_path(@ais_vessal_destination)
+|
+= link_to 'Back', ais_vessal_destinations_path

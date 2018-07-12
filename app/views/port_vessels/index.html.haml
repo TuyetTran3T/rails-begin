@@ -1,0 +1,22 @@
+%p#notice= notice
+%h1 Port Vessels
+%table
+  %thead
+    %tr
+      %th Port
+      %th Vessel
+      %th Last position updated at
+      %th Nav status code
+      %th{:colspan => "3"}
+  %tbody
+    - @port_vessels.each do |port_vessel|
+      %tr
+        %td= port_vessel.port_id
+        %td= port_vessel.vessel_id
+        %td= port_vessel.last_position_updated_at
+        %td= port_vessel.nav_status_code
+        %td= link_to 'Show', port_vessel
+        %td= link_to 'Edit', edit_port_vessel_path(port_vessel)
+        %td= link_to 'Destroy', port_vessel, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Port Vessel', new_port_vessel_path

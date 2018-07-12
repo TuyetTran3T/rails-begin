@@ -1,0 +1,47 @@
+= form_with(model: vessel, local: true) do |form|
+  - if vessel.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(vessel.errors.count, "error")
+        prohibited this vessel from being saved:
+      %ul
+        - vessel.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :status
+    = form.number_field :status, id: :vessel_status
+  .field
+    = form.label :mmsi
+    = form.text_field :mmsi, id: :vessel_mmsi
+  .field
+    = form.label :imo
+    = form.text_field :imo, id: :vessel_imo
+  .field
+    = form.label :name
+    = form.text_field :name, id: :vessel_name
+  .field
+    = form.label :callsign
+    = form.text_field :callsign, id: :vessel_callsign
+  .field
+    = form.label :vessel_type
+    = form.text_field :vessel_type, id: :vessel_vessel_type
+  .field
+    = form.label :vessel_class
+    = form.text_field :vessel_class, id: :vessel_vessel_class
+  .field
+    = form.label :company_id
+    = form.number_field :company_id, id: :vessel_company_id
+  .field
+    = form.label :line_id
+    = form.number_field :line_id, id: :vessel_line_id
+  .field
+    = form.label :raw_data
+    = form.number_field :raw_data, id: :vessel_raw_data
+  .field
+    = form.label :slug
+    = form.text_field :slug, id: :vessel_slug
+  .field
+    = form.label :active
+    = form.check_box :active, id: :vessel_active
+  .actions
+    = form.submit

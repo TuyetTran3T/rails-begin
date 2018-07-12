@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: 1
+  mmsi: MyString
+  imo: MyString
+  name: MyString
+  callsign: MyString
+  vessel_type: MyString
+  vessel_class: MyString
+  company_id: 1
+  line_id: 1
+  raw_data: 1
+  slug: MyString
+  active: false
+
+two:
+  status: 1
+  mmsi: MyString
+  imo: MyString
+  name: MyString
+  callsign: MyString
+  vessel_type: MyString
+  vessel_class: MyString
+  company_id: 1
+  line_id: 1
+  raw_data: 1
+  slug: MyString
+  active: false

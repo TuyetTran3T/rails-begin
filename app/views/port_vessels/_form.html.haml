@@ -1,0 +1,23 @@
+= form_with(model: port_vessel, local: true) do |form|
+  - if port_vessel.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(port_vessel.errors.count, "error")
+        prohibited this port_vessel from being saved:
+      %ul
+        - port_vessel.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :port_id
+    = form.number_field :port_id, id: :port_vessel_port_id
+  .field
+    = form.label :vessel_id
+    = form.number_field :vessel_id, id: :port_vessel_vessel_id
+  .field
+    = form.label :last_position_updated_at
+    = form.datetime_select :last_position_updated_at, id: :port_vessel_last_position_updated_at
+  .field
+    = form.label :nav_status_code
+    = form.number_field :nav_status_code, id: :port_vessel_nav_status_code
+  .actions
+    = form.submit

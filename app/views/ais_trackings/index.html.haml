@@ -1,0 +1,34 @@
+%p#notice= notice
+%h1
+  = full_title('')
+  Ais Trackings
+%table
+  %thead
+    %tr
+      %th Latitude
+      %th Longtitude
+      %th Heading
+      %th Speed over ground
+      %th Last ais updated at
+      %th Nav status code
+      %th Vessel
+      %th Course
+      %th Collection type
+      %th{:colspan => "3"}
+  %tbody
+    - @ais_trackings.each do |ais_tracking|
+      %tr
+        %td= ais_tracking.latitude
+        %td= ais_tracking.longtitude
+        %td= ais_tracking.heading
+        %td= ais_tracking.speed_over_ground
+        %td= ais_tracking.last_ais_updated_at
+        %td= ais_tracking.nav_status_code
+        %td= ais_tracking.vessel_id
+        %td= ais_tracking.course
+        %td= ais_tracking.collection_type
+        %td= link_to 'Show', ais_tracking
+        %td= link_to 'Edit', edit_ais_tracking_path(ais_tracking)
+        %td= link_to 'Destroy', ais_tracking, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Ais Tracking', new_ais_tracking_path

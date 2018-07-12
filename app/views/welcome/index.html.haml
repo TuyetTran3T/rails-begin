@@ -1,0 +1,12 @@
+
+%h1 Login Rails
+= form_for(:user, url: login_path) do |form|
+  .field
+    = form.label :user_name
+    = form.text_field :user_name, id: :user_user_name
+  .field
+    = form.label :password
+    = form.text_field :password, id: :user_password
+  .actions
+    = form.submit "Login"
+

@@ -1,0 +1,40 @@
+%p#notice= notice
+%p
+  %strong Status:
+  = @vessel.status
+%p
+  %strong Mmsi:
+  = @vessel.mmsi
+%p
+  %strong Imo:
+  = @vessel.imo
+%p
+  %strong Name:
+  = @vessel.name
+%p
+  %strong Callsign:
+  = @vessel.callsign
+%p
+  %strong Vessel type:
+  = @vessel.vessel_type
+%p
+  %strong Vessel class:
+  = @vessel.vessel_class
+%p
+  %strong Company:
+  = @vessel.company_id
+%p
+  %strong Line:
+  = @vessel.line_id
+%p
+  %strong Raw data:
+  = @vessel.raw_data
+%p
+  %strong Slug:
+  = @vessel.slug
+%p
+  %strong Active:
+  = @vessel.active
+= link_to 'Edit', edit_vessel_path(@vessel)
+|
+= link_to 'Back', vessels_path

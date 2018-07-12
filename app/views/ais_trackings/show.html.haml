@@ -1,0 +1,31 @@
+%p#notice= notice
+%p
+  %strong Latitude:
+  = @ais_tracking.latitude
+%p
+  %strong Longtitude:
+  = @ais_tracking.longtitude
+%p
+  %strong Heading:
+  = @ais_tracking.heading
+%p
+  %strong Speed over ground:
+  = @ais_tracking.speed_over_ground
+%p
+  %strong Last ais updated at:
+  = @ais_tracking.last_ais_updated_at
+%p
+  %strong Nav status code:
+  = @ais_tracking.nav_status_code
+%p
+  %strong Vessel:
+  = @ais_tracking.vessel_id
+%p
+  %strong Course:
+  = @ais_tracking.course
+%p
+  %strong Collection type:
+  = @ais_tracking.collection_type
+= link_to 'Edit', edit_ais_tracking_path(@ais_tracking)
+|
+= link_to 'Back', ais_trackings_path

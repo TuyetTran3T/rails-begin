@@ -1,0 +1,22 @@
+%p#notice= notice
+%h1 Ais Vessal Destinations
+%table
+  %thead
+    %tr
+      %th Vessel
+      %th Destination
+      %th Draught
+      %th Eta
+      %th{:colspan => "3"}
+  %tbody
+    - @ais_vessal_destinations.each do |ais_vessal_destination|
+      %tr
+        %td= ais_vessal_destination.vessel_id
+        %td= ais_vessal_destination.destination
+        %td= ais_vessal_destination.draught
+        %td= ais_vessal_destination.eta
+        %td= link_to 'Show', ais_vessal_destination
+        %td= link_to 'Edit', edit_ais_vessal_destination_path(ais_vessal_destination)
+        %td= link_to 'Destroy', ais_vessal_destination, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Ais Vessal Destination', new_ais_vessal_destination_path

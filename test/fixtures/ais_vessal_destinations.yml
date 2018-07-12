@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vessel_id: 1
+  destination: MyString
+  draught: 1.5
+  eta: 2018-03-22 17:43:08
+
+two:
+  vessel_id: 1
+  destination: MyString
+  draught: 1.5
+  eta: 2018-03-22 17:43:08
